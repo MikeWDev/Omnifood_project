@@ -89,3 +89,6 @@ export {
 import WomanEating from "./eating.jpg";
 
 export { WomanEating };
+
+import omniLogo from "./omnifood-logo.png";
+export { omniLogo };

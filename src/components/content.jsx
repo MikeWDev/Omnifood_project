@@ -29,7 +29,7 @@ export const featureCardNo3 = {
   text: "All our partners only use reusable containers to package all your meals",
 };
 export const featureCardNo4 = {
-  icon: "ause-outline",
+  icon: "Pause-outline",
   title: "Pause anytime",
   text: " Going on vacation? Just pause your subscription, and we refund unused days.",
 };

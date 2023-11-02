@@ -20,7 +20,6 @@ function App() {
       <SectionMeals />
       <SectionTestimonials />
       <SectionPricing />
-      <SectionFeatCards />
       <SectionCta />
     </>
   );
