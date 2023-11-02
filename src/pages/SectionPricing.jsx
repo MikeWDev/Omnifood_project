@@ -1,3 +1,5 @@
+import PricingPlan from "../components/pricingPlan";
+import { starterPlan, completePlan } from "../components/content";
 const SectionPricing = () => {
   return (
     <section className="section-pricing" id="pricing">
@@ -9,52 +11,25 @@ const SectionPricing = () => {
       </div>
 
       <div className="container grid grid--2-cols margin-bottom-md">
-        <div className="pricing-plan pricing-plan--starter">
-          <header className="plan-header">
-            <p className="plan-name">Starter</p>
-            <p className="plan-price">
-              <span>$</span>399
-            </p>
-            <p className="plan-text">per month. That's just $13 per meal!</p>
-          </header>
-          <ul className="list">
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>1 meal per day</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Order from 11am to 9pm</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Delivery is free</span>
-            </li>
-            <li className="list-item">
-              <ion-icon className="list-icon" name="close-outline"></ion-icon>
-            </li>
-          </ul>
-          <div className="plan-sing-up">
-            <a href="#" className="btn btn--full">
-              Start eating well
-            </a>
-          </div>
-        </div>
-
-        <div className="pricing-plan pricing-plan--complete">
+        <PricingPlan
+          planClass="pricing-plan--starter"
+          planName="Starter"
+          planPrice="399"
+          planText="per month. That's just $13 per meal!"
+          planBullets={starterPlan}
+        />
+        <PricingPlan
+          planClass="pricing-plan--complete"
+          planName="Complete"
+          planPrice="649"
+          planText="per month. That's just $11 per meal!"
+          planBullets={completePlan}
+        />
+        {/* <div className="pricing-plan pricing-plan--complete">
           <header className="plan-header">
             <p className="plan-name">Complete</p>
             <p className="plan-price">
-              <span>$</span>649
+              <span>$</span>
             </p>
             <p className="plan-text">per month. That's just $11 per meal!</p>
           </header>
@@ -97,7 +72,7 @@ const SectionPricing = () => {
               Start eating well
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="container grid">
