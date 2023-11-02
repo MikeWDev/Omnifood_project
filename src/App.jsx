@@ -8,6 +8,7 @@ import SectionHow from "./pages/SectionHow";
 import SectionMeals from "./pages/SectionMeals";
 import SectionTestimonials from "./pages/SectionTestimonials";
 import SectionPricing from "./pages/SectionPricing";
+import SectionCta from "./pages/SectionCta";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <SectionMeals />
       <SectionTestimonials />
       <SectionPricing />
+      <SectionCta />
     </>
   );
 }
