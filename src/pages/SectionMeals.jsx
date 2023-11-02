@@ -1,4 +1,6 @@
 import { Meal1, Meal2 } from "../assets/img/imgIndex";
+import DietList from "../components/dietList";
+import MealCard from "../components/mealCard";
 const SectionMeals = () => {
   return (
     <section className="section-meals" id="meals">
@@ -10,141 +12,34 @@ const SectionMeals = () => {
       </div>
 
       <div className="container grid grid--3-cols margin-bottom-md">
-        <div className="meal">
-          <img src={Meal1} className="meal-img" alt="Japanese Gyozas" />
-          <div className="meal-content">
-            <div className="meal-tags">
-              <span className="tag tag--vegetarian">Vegetarian</span>
-            </div>
-            <p className="meal-title">Japanese Gyozas</p>
-            <ul className="meal-attributes">
-              <li className="meal-attribute">
-                <ion-icon className="meal-icon" name="flame-outline"></ion-icon>
-                <span>
-                  <strong>650</strong> calories
-                </span>
-              </li>
-              <li className="meal-attribute">
-                <ion-icon
-                  className="meal-icon"
-                  name="restaurant-outline"
-                ></ion-icon>
-                <span>
-                  NutriScore &reg; <strong>74</strong>
-                </span>
-              </li>
-              <li className="meal-attribute">
-                <ion-icon className="meal-icon" name="star-outline"></ion-icon>
-                <span>
-                  <strong>4.9</strong> rating (537)
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <MealCard
+          imgSrc={Meal1}
+          alt="Japanese Gyozas"
+          tagClass="tag--vegetarian"
+          ndTagClass=""
+          ndTagText=""
+          tagText="Vegetarian"
+          mealTitle="Japanese Gyozas"
+          caloriesNo="650"
+          nutriNo="74"
+          ratingStars="4.9"
+          ratingNo="537"
+        />
 
-        <div className="meal">
-          <img src={Meal2} className="meal-img" alt="Avocado Salad" />
-          <div className="meal-content">
-            <div className="meal-tags">
-              <span className="tag tag--vegan">Vegan</span>
-              <span className="tag tag--paleo">Paleo</span>
-            </div>
-            <p className="meal-title">Avocado Salad</p>
-            <ul className="meal-attributes">
-              <li className="meal-attribute">
-                <ion-icon className="meal-icon" name="flame-outline"></ion-icon>
-                <span>
-                  <strong>400</strong> calories
-                </span>
-              </li>
-              <li className="meal-attribute">
-                <ion-icon
-                  className="meal-icon"
-                  name="restaurant-outline"
-                ></ion-icon>
-                <span>
-                  NutriScore &reg; <strong>92</strong>
-                </span>
-              </li>
-              <li className="meal-attribute">
-                <ion-icon className="meal-icon" name="star-outline"></ion-icon>
-                <span>
-                  <strong>4.8</strong> rating (441)
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="diets">
-          <h3 className="heading-tertiary">Works with any diet:</h3>
-          <ul className="list">
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Vegetarian</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Vegan</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Pescatarian</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Gluten-free</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Lactose-free</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Keto</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Paleo</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Low FODMAP</span>
-            </li>
-            <li className="list-item">
-              <ion-icon
-                className="list-icon"
-                name="checkmark-outline"
-              ></ion-icon>
-              <span>Kid-friendly</span>
-            </li>
-          </ul>
-        </div>
+        <MealCard
+          imgSrc={Meal2}
+          alt="Avocado Salad"
+          tagClass="tag--vegan"
+          tagText="Vegan"
+          ndTagClass="tag--vegetarian"
+          ndTagText="Paleo"
+          mealTitle="Avocado Salad"
+          caloriesNo="400"
+          nutriNo="92"
+          ratingStars="4.8"
+          ratingNo="441"
+        />
+        <DietList />
       </div>
 
       <div className="container all-recipes">

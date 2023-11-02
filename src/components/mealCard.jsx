@@ -1,17 +1,27 @@
+import MealTag from "./mealTag";
+
 const MealCard = (props) => {
   return (
     <div className="meal">
-      <img src={Meal1} className="meal-img" alt="Japanese Gyozas" />
+      <img src={props.imgSrc} className="meal-img" alt={props.alt} />
       <div className="meal-content">
         <div className="meal-tags">
-          <span className="tag tag--vegetarian">Vegetarian</span>
+          <MealTag
+            tagClass={`${props.tagClass}`}
+            tagText={`${props.tagText}`}
+          />
+          <MealTag
+            tagClass={`${props.ndTagClass}`}
+            tagText={`${props.ndTagText}`}
+          />
         </div>
-        <p className="meal-title">Japanese Gyozas</p>
+
+        <p className="meal-title">{props.mealTitle}</p>
         <ul className="meal-attributes">
           <li className="meal-attribute">
             <ion-icon className="meal-icon" name="flame-outline"></ion-icon>
             <span>
-              <strong>650</strong> calories
+              <strong>{props.caloriesNo}</strong> calories
             </span>
           </li>
           <li className="meal-attribute">
@@ -20,13 +30,13 @@ const MealCard = (props) => {
               name="restaurant-outline"
             ></ion-icon>
             <span>
-              NutriScore &reg; <strong>74</strong>
+              NutriScore &reg; <strong>{props.nutriNo}</strong>
             </span>
           </li>
           <li className="meal-attribute">
             <ion-icon className="meal-icon" name="star-outline"></ion-icon>
             <span>
-              <strong>4.9</strong> rating (537)
+              <strong>{props.ratingStars}</strong> rating ({props.ratingNo})
             </span>
           </li>
         </ul>
