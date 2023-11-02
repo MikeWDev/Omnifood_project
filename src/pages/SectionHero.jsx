@@ -9,11 +9,12 @@ import {
   HeroMin,
   HeroWebp,
 } from "../assets/img/imgIndex";
+import { Link } from "react-scroll";
 const SectionHero = () => {
   return (
     <>
       <NavBar />
-      <section className="section-hero">
+      <section className="section-hero" id="hero">
         <div className="hero">
           <div className="hero-text-box">
             <h1 className="heading-primary">
@@ -24,13 +25,25 @@ const SectionHero = () => {
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#cta" className="btn btn--full margin-right-sm">
+            <Link
+              to="cta"
+              duration={2000}
+              smooth={true}
+              className="btn btn--full margin-right-sm"
+              href="#cta"
+            >
               Start eating well
-            </a>
-
-            <a href="#how" className="btn btn--outline">
+            </Link>
+            <Link
+              to="how"
+              duration={2000}
+              smooth={true}
+              className="btn btn--outline"
+              href="#how"
+            >
               Learn more &darr;
-            </a>
+            </Link>
+
             <div className="delivered-meals">
               <div className="delivered-imgs">
                 <img src={Customer1} alt="Customer photo" />

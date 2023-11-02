@@ -1,38 +1,69 @@
 import { OmniFoodLogo } from "../assets/img/imgIndex";
+import { Link } from "react-scroll";
 const NavBar = () => {
   return (
     <>
       <header className="header">
-        <a href="#">
+        <Link to="hero" duration={2000} smooth={true} className="footer-logo">
           <img className="logo" alt="Omnifood logo" src={OmniFoodLogo} />
-        </a>
+        </Link>
 
         <nav className="main-nav">
           <ul className="main-nav-list">
             <li>
-              <a className="main-nav-link" href="#how">
+              <Link
+                to="how"
+                duration={2000}
+                smooth={true}
+                className="main-nav-link"
+                href="#how"
+              >
                 How it works
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="main-nav-link" href="#meals">
+              <Link
+                to="meals"
+                duration={2000}
+                smooth={true}
+                className="main-nav-link"
+                href="#meals"
+              >
                 Meals
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="main-nav-link" href="#testimonials">
+              <Link
+                to="testimonials"
+                duration={2000}
+                smooth={true}
+                className="main-nav-link"
+                href="#testimonials"
+              >
                 Testimonials
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="main-nav-link" href="#pricing">
+              <Link
+                to="pricing"
+                duration={2000}
+                smooth={true}
+                className="main-nav-link"
+                href="#pricing"
+              >
                 Pricing
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="main-nav-link nav-cta" href="#cta">
+              <Link
+                to="cta"
+                duration={1000}
+                smooth={true}
+                className="main-nav-link nav-cta"
+                href="#cta"
+              >
                 Try for free
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
