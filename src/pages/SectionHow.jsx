@@ -1,3 +1,4 @@
+import { AppScreen1, AppScreen2, AppScreen3 } from "../assets/img/imgIndex";
 const SectionHow = () => {
   return (
     <section className="section-how" id="how">
@@ -24,7 +25,7 @@ const SectionHow = () => {
 
         <div className="step-img-box">
           <img
-            src="img/app/app-screen-1.png"
+            src={AppScreen1}
             className="step-img"
             alt="iPhone app
       preferences selection screen"
@@ -33,7 +34,7 @@ const SectionHow = () => {
 
         <div className="step-img-box">
           <img
-            src="img/app/app-screen-2.png"
+            src={AppScreen2}
             className="step-img"
             alt="iPhone app
       meal approving plan screen"
@@ -60,7 +61,7 @@ const SectionHow = () => {
         </div>
         <div className="step-img-box">
           <img
-            src="img/app/app-screen-3.png"
+            src={AppScreen3}
             className="step-img"
             alt="iPhone app
       delivery screen"

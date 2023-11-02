@@ -1,13 +1,10 @@
+import { OmniFoodLogo } from "../assets/img/imgIndex";
 const NavBar = () => {
   return (
     <>
       <header className="header">
         <a href="#">
-          <img
-            className="logo"
-            alt="Omnifood logo"
-            src="img/omnifood-logo.png"
-          />
+          <img className="logo" alt="Omnifood logo" src={OmniFoodLogo} />
         </a>
 
         <nav className="main-nav">

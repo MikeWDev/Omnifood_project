@@ -1,4 +1,14 @@
 import NavBar from "../components/navBar";
+import {
+  Customer1,
+  Customer2,
+  Customer3,
+  Customer4,
+  Customer5,
+  Customer6,
+  HeroMin,
+  HeroWebp,
+} from "../assets/img/imgIndex";
 const SectionHero = () => {
   return (
     <>
@@ -23,12 +33,12 @@ const SectionHero = () => {
             </a>
             <div className="delivered-meals">
               <div className="delivered-imgs">
-                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
-                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+                <img src={Customer1} alt="Customer photo" />
+                <img src={Customer2} alt="Customer photo" />
+                <img src={Customer3} alt="Customer photo" />
+                <img src={Customer4} alt="Customer photo" />
+                <img src={Customer5} alt="Customer photo" />
+                <img src={Customer6} alt="Customer photo" />
               </div>
               <p className="delivered-text">
                 <span>250,000+</span> meals delivered last year!
@@ -37,11 +47,11 @@ const SectionHero = () => {
           </div>
           <div className="hero-img-box">
             <picture>
-              <source srcset="img/hero.webp" type="image/webp" />
-              <source srcset="img/hero-min.png" type="image/png" />
+              <source srcSet={HeroWebp} type="image/webp" />
+              <source srcSet={HeroMin} type="image/png" />
 
               <img
-                src="img/hero-min.png"
+                src={HeroMin}
                 className="hero-img"
                 alt="Woman enjoying food, meals in storage container, and food bowls on a table"
               />

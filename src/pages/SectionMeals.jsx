@@ -1,3 +1,4 @@
+import { Meal1, Meal2 } from "../assets/img/imgIndex";
 const SectionMeals = () => {
   return (
     <section className="section-meals" id="meals">
@@ -10,11 +11,7 @@ const SectionMeals = () => {
 
       <div className="container grid grid--3-cols margin-bottom-md">
         <div className="meal">
-          <img
-            src="img/meals/meal-1.jpg"
-            className="meal-img"
-            alt="Japanese Gyozas"
-          />
+          <img src={Meal1} className="meal-img" alt="Japanese Gyozas" />
           <div className="meal-content">
             <div className="meal-tags">
               <span className="tag tag--vegetarian">Vegetarian</span>
@@ -47,14 +44,10 @@ const SectionMeals = () => {
         </div>
 
         <div className="meal">
-          <img
-            src="img/meals/meal-2.jpg"
-            className="meal-img"
-            alt="Avocado Salad"
-          />
+          <img src={Meal2} className="meal-img" alt="Avocado Salad" />
           <div className="meal-content">
             <div className="meal-tags">
-              <span classNameName="tag tag--vegan">Vegan</span>
+              <span className="tag tag--vegan">Vegan</span>
               <span className="tag tag--paleo">Paleo</span>
             </div>
             <p className="meal-title">Avocado Salad</p>

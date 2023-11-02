@@ -1,3 +1,21 @@
+import {
+  Gallery1,
+  Gallery2,
+  Gallery3,
+  Gallery4,
+  Gallery5,
+  Gallery6,
+  Gallery7,
+  Gallery8,
+  Gallery9,
+  Gallery10,
+  Gallery11,
+  Gallery12,
+  Dave,
+  Steve,
+  Hannah,
+  Ben,
+} from "../assets/img/imgIndex";
 const SectionTestimonials = () => {
   return (
     <section className="section-testimonials" id="testimonials">
@@ -12,7 +30,7 @@ const SectionTestimonials = () => {
             <img
               className="testimonial-img"
               alt="Photo of customer Dave Bryson"
-              src="img/customers/dave.jpg"
+              src={Dave}
             />
             <blockquote className="testimonial-text">
               Inexpensive, healthy and great-tasting meals, without even having
@@ -25,7 +43,7 @@ const SectionTestimonials = () => {
             <img
               className="testimonial-img"
               alt="Photo of customer Ben Hadley"
-              src="img/customers/ben.jpg"
+              src={Ben}
             />
             <blockquote className="testimonial-text">
               The AI algorithm is crazy good, it chooses the right meals for me
@@ -38,7 +56,7 @@ const SectionTestimonials = () => {
             <img
               className="testimonial-img"
               alt="Photo of customer Steve Miller"
-              src="img/customers/steve.jpg"
+              src={Steve}
             />
             <blockquote className="testimonial-text">
               Omnifood is a life saver! I just started a company, so there's no
@@ -51,7 +69,7 @@ const SectionTestimonials = () => {
             <img
               className="testimonial-img"
               alt="Photo of customer Hannah Smith"
-              src="img/customers/hannah.jpg"
+              src={Hannah}
             />
             <blockquote className="testimonial-text">
               I got Omnifood for the whole family, and it frees up so much time!
@@ -65,84 +83,84 @@ const SectionTestimonials = () => {
       <div className="gallery">
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-1.jpg"
+            src={Gallery1}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-2.jpg"
+            src={Gallery2}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-3.jpg"
+            src={Gallery3}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-4.jpg"
+            src={Gallery4}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-5.jpg"
+            src={Gallery5}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-6.jpg"
+            src={Gallery6}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-7.jpg"
+            src={Gallery7}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-8.jpg"
+            src={Gallery8}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-9.jpg"
+            src={Gallery9}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-10.jpg"
+            src={Gallery10}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-11.jpg"
+            src={Gallery11}
             alt="Photo of beautifully
       arranged food"
           />
         </figure>
         <figure className="gallery-item">
           <img
-            src="img/gallery/gallery-12.jpg"
+            src={Gallery12}
             alt="Photo of beautifully
       arranged food"
           />
