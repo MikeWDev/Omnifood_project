@@ -1,4 +1,6 @@
 import { AppScreen1, AppScreen2, AppScreen3 } from "../assets/img/imgIndex";
+import StepImgBox from "../components/stepImgBox";
+import StepTextBox from "../components/stepTextBox";
 const SectionHow = () => {
   return (
     <section className="section-how" id="how">
@@ -10,63 +12,38 @@ const SectionHow = () => {
       </div>
 
       <div className="container grid grid--2-cols grid--center-v">
-        <div className="step-text-box">
-          <p className="step-number">01</p>
-          <h3 className="heading-tertiary">
-            Tell us what you like (and what not)
-          </h3>
-          <p className="step-description">
-            Never again waste time thinking about what to eat! Omnifood AI will
-            create a 100% personalized weekly meal plan just for you. It makes
-            sure you get all the nutrients and vitamins you need, no matter what
-            diet you follow!
-          </p>
-        </div>
-
-        <div className="step-img-box">
-          <img
-            src={AppScreen1}
-            className="step-img"
-            alt="iPhone app
-      preferences selection screen"
-          />
-        </div>
-
-        <div className="step-img-box">
-          <img
-            src={AppScreen2}
-            className="step-img"
-            alt="iPhone app
-      meal approving plan screen"
-          />
-        </div>
-        <div className="step-text-box">
-          <p className="step-number">02</p>
-          <h3 className="heading-tertiary">Approve your weekly meal plan</h3>
-          <p className="step-description">
-            Once per week, approve the meal plan generated for you by Omnifood
-            AI. You can change ingredients, swap entire meals, or even add your
-            own recipes.
-          </p>
-        </div>
-
-        <div className="step-text-box">
-          <p className="step-number">03</p>
-          <h3 className="heading-tertiary">Receive meals at convenient time</h3>
-          <p className="step-description">
-            Best chefs in town will cook your selected meal every day, and we
-            will deliver it to your door whenever works best for you. You can
-            change delivery schedule and address daily!
-          </p>
-        </div>
-        <div className="step-img-box">
-          <img
-            src={AppScreen3}
-            className="step-img"
-            alt="iPhone app
-      delivery screen"
-          />
-        </div>
+        <StepTextBox
+          number="01"
+          heading="Tell us what you like (and what not)"
+          description="Never again waste time thinking about what to eat! Omnifood AI will
+          create a 100% personalized weekly meal plan just for you. It makes sure
+          you get all the nutrients and vitamins you need, no matter what diet you
+          follow!"
+        />
+        <StepImgBox
+          src={AppScreen1}
+          alt="iPhone app preferences selection screen"
+        />
+        <StepImgBox
+          src={AppScreen2}
+          alt="iPhone app
+        meal approving plan screen"
+        />
+        <StepTextBox
+          number="02"
+          heading="Approve your weekly meal plan"
+          description=" Once per week, approve the meal plan generated for you by Omnifood
+          AI. You can change ingredients, swap entire meals, or even add your
+          own recipes."
+        />
+        <StepTextBox
+          number="03"
+          heading="Receive meals at convenient time"
+          description=" Best chefs in town will cook your selected meal every day, and we
+        will deliver it to your door whenever works best for you. You can
+        change delivery schedule and address daily!"
+        />
+        <StepImgBox src={AppScreen3} alt="iPhone app delivery screen" />
       </div>
     </section>
   );
