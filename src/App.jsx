@@ -9,6 +9,7 @@ import SectionMeals from "./pages/SectionMeals";
 import SectionTestimonials from "./pages/SectionTestimonials";
 import SectionPricing from "./pages/SectionPricing";
 import SectionCta from "./pages/SectionCta";
+import SectionFeatCards from "./pages/SectionFeatureCards";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <SectionMeals />
       <SectionTestimonials />
       <SectionPricing />
+      <SectionFeatCards />
       <SectionCta />
     </>
   );
