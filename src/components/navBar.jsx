@@ -1,9 +1,52 @@
+import { useState } from "react";
 import { OmniFoodLogo } from "../assets/img/imgIndex";
 import { Link } from "react-scroll";
 const NavBar = () => {
+  const [stickyClass, setStickyClass] = useState("");
+  const sectionHeroEl = document.querySelectorAll(".section-hero");
+  const bodyEl = document.querySelector("body");
+
+  const obs = new IntersectionObserver(
+    function (entries) {
+      const ent = entries[0];
+      console.log(ent);
+    },
+    {
+      root: null,
+      threshold: 0,
+      rootMargin: "-80px",
+    }
+  );
+  sectionHeroEl.forEach((el) => {
+    obs.observe(el);
+  });
+
+  // const obs = new IntersectionObserver(
+  //   function (entries) {
+  //     const ent = entries[0];
+  //     console.log(ent);
+
+  //     // if (ent.isIntersecting === false) {
+  //     //   setStickyClass("sticky");
+  //     //   bodyEl.classList.add({ stickyClass });
+  //     // }
+  //     // if (ent.isIntersecting === true) {
+  //     //   setStickyClass("");
+  //     // }
+  //   },
+  //   {
+  //     root: null,
+  //     threshold: 0,
+  //     rootMargin: "-80px",
+  //   }
+  // );
+  // obs.observe(sectionHeroEl);
+  // // sectionHeroEl.forEach((el) => {
+  // // });
+
   return (
     <>
-      <header className="header">
+      <header className={`header `}>
         <Link to="hero" duration={2000} smooth={true} className="footer-logo">
           <img className="logo" alt="Omnifood logo" src={OmniFoodLogo} />
         </Link>
