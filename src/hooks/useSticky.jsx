@@ -1,32 +1,33 @@
-// const UseSticky = () => {
-//   const [stickyClass, setStickyClass] = useState("");
-//   const sectionHeroEl = document.querySelectorAll(".section-hero");
-//   const bodyEl = document.querySelectorAll("body");
-//   const obs = new IntersectionObserver(
-//     function (entries) {
-//       const ent = entries[0];
-//       console.log(ent);
+const[IntersectinnState, setIntersectingState] = useState(true);
+const[stickyClass, setStickyClass] = useState("");
+useEffect(() =>{
+const obs = new IntersectionObserver(
+  function (entires){
+    const ent = entires[0];
+    const bodyEl = document.body;
+  
+    if(ent.isIntersecting===false){
+      bodyEl.classList.add("sticky");
+      setIntersectingState(false)
+      console.log(bodyEl);
+    }else{
+      if(ent.isIntersecting===true){
+        bodyEl.classList.remove("sticky");
+        setIntersectingState(true)
+        console.log(bodyEl);
+      }
+    }
+  },
+  {
+    root:null,
+    threshold:0,
+    rootMargin:"-90px"
+  }
+);
+const heroEl = document.querySelectorAll(".section-hero");
 
-//       if (ent.isIntersecting === false) {
-//         setStickyClass("sticky");
-//         console.log(bodyEl);
-//       }
+heroEl.forEach((el) =>{
+  obs.observe(el)
+})
+}, [IntersectinnState])
 
-//       if (ent.isIntersecting === true) {
-//         setStickyClass("");
-//       }
-//     },
-//     {
-//       // In the viewport
-//       root: null,
-//       threshold: 0,
-//       rootMargin: "-80px",
-//     }
-//   );
-//   sectionHeroEl.forEach((el) => {
-//     obs.observe(el);
-//   });
-//   return stickyClass;
-// };
-
-// export default UseSticky;
