@@ -1,25 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { OmniFoodLogo } from "../assets/img/imgIndex";
 import { Link } from "react-scroll";
 const NavBar = () => {
-  const [stickyClass, setStickyClass] = useState("");
-  const sectionHeroEl = document.querySelectorAll(".section-hero");
-  const bodyEl = document.querySelector("body");
-
+  
+  const[IntersectinnState, setIntersectingState] = useState(true);
+  const[stickyClass, setStickyClass] = useState("");
+  useEffect(() =>{
   const obs = new IntersectionObserver(
-    function (entries) {
-      const ent = entries[0];
-      console.log(ent);
+    function (entires){
+      const ent = entires[0];
+      
+    
+      if(ent.isIntersecting===false){
+        setIntersectingState(false)
+      }else{
+        if(ent.isIntersecting===true){
+          setIntersectingState(true)
+        }
+      }
     },
     {
-      root: null,
-      threshold: 0,
-      rootMargin: "-80px",
+      root:null,
+      threshold:0,
+      rootMargin:"-90px"
     }
   );
-  sectionHeroEl.forEach((el) => {
-    obs.observe(el);
-  });
+  const heroEl = document.querySelectorAll(".section-hero");
+  
+  heroEl.forEach((el) =>{
+    obs.observe(el)
+  })
+ })
+  console.log(IntersectinnState);
+useEffect(() =>{
+ console
+  const bodyEl = document.body;
+   if(IntersectinnState===false){
+    setStickyClass("sticky");
+    console.log(bodyEl);
+    bodyEl.classList.add("sticky");
+   } else{
+    if(IntersectinnState===true){
+      bodyEl.classList.remove("sticky");
+      console.log(bodyEl);
+    }
+   }
+
+},[IntersectinnState])
 
   // const obs = new IntersectionObserver(
   //   function (entries) {
@@ -44,8 +71,8 @@ const NavBar = () => {
   // // sectionHeroEl.forEach((el) => {
   // // });
 
-  return (
-    <>
+  
+    return <>
       <header className={`header `}>
         <Link to="hero" duration={2000} smooth={true} className="footer-logo">
           <img className="logo" alt="Omnifood logo" src={OmniFoodLogo} />
@@ -117,7 +144,7 @@ const NavBar = () => {
         </button>
       </header>
     </>
-  );
-};
+}
+
 
 export default NavBar;
